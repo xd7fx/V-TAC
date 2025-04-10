@@ -1,4 +1,4 @@
-# V-TAC: AI-Powered Football Match Prediction and Tactical Assistant
+![image](https://github.com/user-attachments/assets/fc5ad310-4a2c-4dcc-85fb-55c0f9a69407)# V-TAC: AI-Powered Football Match Prediction and Tactical Assistant
 
 ## 🌟 Overview
 **V-TAC (Virtual Tactical Assistant Coach)** is a football intelligence system that leverages AI to provide accurate match outcome predictions and real-time tactical recommendations for coaches. It consists of two core models:
@@ -91,11 +91,11 @@ Live match snapshot including:
 
 ### 📈 Win Probability Curve
 
-![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/920e589d-d7c2-4383-b83c-a5266eb0bfb1)
 ![image (1)](https://github.com/user-attachments/assets/a79735b3-df86-4089-8fb5-57f7d667c853)
 
----
+![image](https://github.com/user-attachments/assets/1682ed97-056a-4db3-9ee2-aaea4f469626)
 
+---
 ## 📊 Model Comparison
 | Feature                                 | Pre-Match Model | Live Match Model |
 |-----------------------------------------|-----------------|------------------|
@@ -122,19 +122,15 @@ Smart assistant gives natural language advice to the coach:
 
 ---
 
-## 📅 Project Structure
+## 📅 UI / UX
 ```
-├── data/
-│   └── all_data_with_rank_and_point.csv
-├── model_1.ipynb  # Pre-Match Model
-├── model_2.ipynb  # Live Match Model
-├── utils/
-│   └── feature_engineering.py
-├── assets/
-│   ├── feature_importance.png
-│   ├── win_curve_team1.png
-│   ├── confusion_matrix.png
-└── README.md
+try https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC?node-id=14-73&p=f&t=bnZt3raZhrZ4YcC4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1
+![image](https://github.com/user-attachments/assets/58144ca0-7e3c-49bc-b438-3d0b44314ab8)
+![image](https://github.com/user-attachments/assets/8b1e6ede-769a-4e9d-bd66-8257a5be931d)
+![image](https://github.com/user-attachments/assets/f1296340-b97b-4e8b-8fe0-93afdb9d51d4)
+![image](https://github.com/user-attachments/assets/55b32dd4-ec6b-490f-9abd-8ef2720fc477)
+![image](https://github.com/user-attachments/assets/354666d2-75c0-46fe-bc85-f22c8f5f0ff7)
+
 ```
 
 ---
