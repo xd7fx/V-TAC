@@ -34,7 +34,7 @@ The system is powered by **AutoGluon**, enriched with real-world API data, and o
 
 ---
 
-## 🏟️ Model 2: Pre-Match Outcome Prediction
+## 🏟️ Model 1: Pre-Match Outcome Prediction
 
 ### 🎯 Goal
 Predict the match result before kickoff using historical team stats, ranks, and performance trends.
@@ -56,8 +56,8 @@ Predict the match result before kickoff using historical team stats, ranks, and 
 - **Accuracy after oversampling**: ~77%
 - **Model used**: AutoGluon.Tabular with tuning
 
-![Confusion Matrix](./images/confusion_matrix_prematch.png)
-![Score Comparison](./images/model_performance_prematch.png)
+![image_2025-04-10_12-02-15](https://github.com/user-attachments/assets/e4feb2c4-e18a-42d9-9b05-863c3a0b3440)
+![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/5c487c62-ff76-4058-9870-140fd545323e)
 
 ---
 
@@ -87,13 +87,18 @@ Predict match outcome every 5 minutes during the match using live stats + team f
 Chelsea → Win: 63% | Draw: 25% | Loss: 12%
 Recommendation: ✅ Keep the formation, momentum is high.
 ```
+![image](https://github.com/user-attachments/assets/d5702d96-657c-4633-9b5d-f84f6c7995d8)
+![image](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)
+
 
 ### 📈 Performance
 - **Accuracy**: ~72%
 - **Log Loss**: < 0.45
 
-![Confusion Matrix](./images/confusion_matrix_live.png)
-![Score Comparison](./images/model_performance_live.png)
+![image](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)
+![image (1)](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
+
+
 
 ---
 ## 📊 Model Comparison
