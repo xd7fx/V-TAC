@@ -169,10 +169,4 @@ Smart assistant gives natural language advice to the coach:
 - 🤖 Full deployment of V-TAC as an LLM assistant
 - 🏅 Real-world testing with clubs
 
----
-
-## ❤️ Support
-Have questions or want to collaborate?
-- Contact: **vtac@sportai.com**
-- License: MIT
 
