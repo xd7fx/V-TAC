@@ -34,67 +34,66 @@ The system is powered by **AutoGluon**, enriched with real-world API data, and o
 
 ---
 
-## 🏆 Model 1: Pre-Match Prediction
-### Goal
-Predict the result of the match before it starts.
+## 🏟️ Model 2: Pre-Match Outcome Prediction
 
-### Framework
-- Uses `AutoGluon.TabularPredictor`
-- Classification: Multiclass (Win = 1, Draw = 0.5, Loss = 0)
-- Evaluation Metric: `log_loss`
+### 🎯 Goal
+Predict the match result before kickoff using historical team stats, ranks, and performance trends.
 
-### Feature Set
-Over 40 features including:
-- Team & opponent ranks
-- Average goals scored/conceded (last 5)
-- Recent win/draw/loss ratios
-- Possession, pass accuracy, shots, corners
-- Formation success rates
-- H2H historical data
+### ⚙️ Framework
+- Library: AutoGluon.Tabular
+- Type: Multiclass Classification (1 = Win, 0.5 = Draw, 0 = Loss)
+- Metric: Accuracy
 
-### Results
-| Metric       | Value        |
-|--------------|--------------|
-| Accuracy     | ~77%         |
-| Log Loss     | < 0.45       |
+### 📊 Feature Set (~40 total)
+- Team & opponent ranks, points
+- Recent performance (last 5 matches): wins, draws, losses
+- Average goals scored & conceded
+- Possession, corners, shots, pass accuracy
+- Formations & their success rates
+- Head-to-head win/draw/loss rates
 
-### 🖼️ Confusion Matrix (Insert image here)
-![image_2025-04-10_12-02-15](https://github.com/user-attachments/assets/830a576c-f6c8-4b92-b650-8b1f954c023f)
+### 📈 Performance
+- **Accuracy after oversampling**: ~77%
+- **Model used**: AutoGluon.Tabular with tuning
 
-### 🎨 Match Result Visualization (Optional)
-![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/582829bb-1840-4fde-a51c-13d01257a857)
+![Confusion Matrix](./images/confusion_matrix_prematch.png)
+![Score Comparison](./images/model_performance_prematch.png)
 
 ---
 
-## ⏱️ Model 2: Live Match Prediction (Real-time)
-### Goal
-Predict win/draw/loss probabilities every 5 minutes during a match and provide tactical advice.
+## 🥅 Model 2: In-Match Live Outcome Prediction
 
-### Input
-Live match snapshot including:
-- Current formations
-- Possession, passing, goals
-- Updated ranks & points
+### 🎯 Goal
+Predict match outcome every 5 minutes during the match using live stats + team formations.
 
-### Processing
-- Match data is converted to team-level format
-- Same features used as pre-match model
-- Scaled using pre-trained `StandardScaler`
-- Passed to saved AutoGluon model
+### ⚙️ Framework
+- Library: AutoGluon.Tabular
+- Type: Multiclass Classification (1 = Win, 0.5 = Draw, 0 = Loss)
+- Metric: log_loss
 
-### Output Example
-```text
-🕟 15:00
-🏟️ Chelsea → Win: 61%, Draw: 24%, Loss: 15%
-🏟️ Brentford → Win: 23%, Draw: 30%, Loss: 47%
-📅 Recommendation: ⚡ Time to apply pressure. Try offensive subs.
+### 🧠 Features (~40+)
+- Current goals, formations, updated pass/shots/possession
+- Team rank, points (live updated)
+- Recent form (last 5 matches)
+- Formation win-rate, live momentum shifts
+
+### 🔁 Real-Time Prediction
+- Predictions are made for each team separately
+- Output: Probabilities for Win / Draw / Loss
+- Displayed with timestamped recommendations for tactical action
+
+#### 🧪 Example
+```
+Chelsea → Win: 63% | Draw: 25% | Loss: 12%
+Recommendation: ✅ Keep the formation, momentum is high.
 ```
 
-### 📈 Win Probability Curve
+### 📈 Performance
+- **Accuracy**: ~72%
+- **Log Loss**: < 0.45
 
-![image (1)](https://github.com/user-attachments/assets/a79735b3-df86-4089-8fb5-57f7d667c853)
-
-![image](https://github.com/user-attachments/assets/1682ed97-056a-4db3-9ee2-aaea4f469626)
+![Confusion Matrix](./images/confusion_matrix_live.png)
+![Score Comparison](./images/model_performance_live.png)
 
 ---
 ## 📊 Model Comparison
@@ -171,5 +170,111 @@ try https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC?node-id=14-73&p=f&t
 - 🏋️ Player-level performance modeling
 - 🤖 Full deployment of V-TAC as an LLM assistant
 - 🏅 Real-world testing with clubs
+
+
+
+
+
+
+
+# ⚽ V-TAC: Football Match Outcome Predictor
+
+V-TAC is a dual-model AI system for football match prediction. It includes:
+- **Pre-Match Outcome Prediction**
+- **Live In-Match Tactical Recommendation**
+
+Powered by rich data (2016–2023) from [API-Football](https://www.api-football.com/) and trained using AutoGluon.
+
+---
+
+
+
+## 🏟️ Model 2: Pre-Match Outcome Prediction
+
+### 🎯 Goal
+Predict the match result before kickoff using historical team stats, ranks, and performance trends.
+
+### ⚙️ Framework
+- Library: AutoGluon.Tabular
+- Type: Multiclass Classification (1 = Win, 0.5 = Draw, 0 = Loss)
+- Metric: Accuracy
+
+### 📊 Feature Set (~40 total)
+- Team & opponent ranks, points
+- Recent performance (last 5 matches): wins, draws, losses
+- Average goals scored & conceded
+- Possession, corners, shots, pass accuracy
+- Formations & their success rates
+- Head-to-head win/draw/loss rates
+
+### 📈 Performance
+- **Accuracy after oversampling**: ~77%
+- **Model used**: AutoGluon.Tabular with tuning
+
+![Confusion Matrix](./images/confusion_matrix_prematch.png)
+![Score Comparison](./images/model_performance_prematch.png)
+
+---
+
+## 🖥️ User Interface
+The V-TAC interface includes:
+- Real-time win/draw/loss probabilities (updated every 5 minutes)
+- Tactical recommendations based on model output
+- Time-series curves showing momentum shifts
+
+---
+
+## 📂 Project Structure
+```
+├── data/
+│   ├── all_data_with_rank_and_point.csv
+│   ├── Match_Data_with_Kickoff.csv
+│   └── ...
+├── models/
+│   ├── model_1.ipynb (Pre-Match)
+│   ├── model_2.ipynb (Live Match)
+│   └── Best_model.zip
+├── images/
+│   ├── confusion_matrix_prematch.png
+│   ├── confusion_matrix_live.png
+│   ├── model_performance_prematch.png
+│   └── model_performance_live.png
+├── README.md
+└── ui/
+    └── streamlit_app.py
+```
+
+---
+
+## 💼 Authors
+- **@Mehdhar** – Data & AI Engineer
+- **V-TAC Team** – Vision & Tactical Experts
+
+![Team](./images/team_vtac.png)
+
+---
+
+## 🔐 API
+Data collected from [API-Football](https://www.api-football.com/) using league IDs:
+
+| League Name      | ID  | Country      |
+|------------------|-----|--------------|
+| Premier League   | 39  | England      |
+| Saudi Pro League | 307 | Saudi Arabia |
+| Serie A          | 135 | Italy        |
+| Bundesliga       | 78  | Germany      |
+| La Liga          | 140 | Spain        |
+
+---
+
+## 📦 Installation
+```bash
+pip install autogluon
+```
+
+---
+
+## 📜 License
+MIT
 
 
