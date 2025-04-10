@@ -1,5 +1,5 @@
 # V-TAC: AI-Powered Football Match Prediction and Tactical Assistant
-![_⁨صورة PNG⁩](https://github.com/user-attachments/assets/29f60f74-a818-4e75-aabd-f76be645515e)
+![_⁨صورة PNG⁩](https://github.com/user-attachments/assets/03a0fe80-a9b9-43fe-8b26-a1c64b95e47c)
 
 ## 🌟 Overview
 **V-TAC (Virtual Tactical Assistant Coach)** is a football intelligence system that leverages AI to provide accurate match outcome predictions and real-time tactical recommendations for coaches. It consists of two core models:
@@ -154,8 +154,13 @@ try https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC?node-id=14-73&p=f&t
 ---
 
 ## 💼 Authors
-- **@Mehdhar** – Data & AI Engineer
-- **V-TAC Team** – Vision & Tactical Experts
+
+| Name                 | Specialty                      | Role                             |
+|----------------------|--------------------------------|----------------------------------|
+| **Roa AlTurkistani** | Cybersecurity                  | Presentation & Security          |
+| **Ghadir Najm**      | Cybersecurity                  | Business Model                   |
+| **Osama AlGhamdi**   | Sports Artificial Intelligence | Model Building & Analysis        |
+| **Abdulrahman AlNashri** | AI & UI/UX Design           | User Interface & Experience      |
 
 ---
 
