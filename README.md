@@ -92,8 +92,7 @@ Recommendation: ✅ Keep the formation, momentum is high.
 
 
 ### 📈 Performance
-- **Accuracy**: ~72%
-- **Log Loss**: < 0.45
+- **Log Loss**: < 0.3
 
 ![image](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)
 ![image (1)](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
