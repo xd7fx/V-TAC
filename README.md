@@ -57,11 +57,11 @@ Over 40 features including:
 | Accuracy     | ~77%         |
 | Log Loss     | < 0.45       |
 
-### 🖼️ Feature Importance (Insert image here)
-`[Insert feature_importance.png]`
+### 🖼️ Confusion Matrix (Insert image here)
+![image_2025-04-10_12-02-15](https://github.com/user-attachments/assets/830a576c-f6c8-4b92-b650-8b1f954c023f)
 
 ### 🎨 Match Result Visualization (Optional)
-`[Insert confusion_matrix.png]`
+![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/582829bb-1840-4fde-a51c-13d01257a857)
 
 ---
 
@@ -90,8 +90,9 @@ Live match snapshot including:
 ```
 
 ### 📈 Win Probability Curve
-`[Insert win_curve_team1.png]`
-`[Insert win_curve_team2.png]`
+
+![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/920e589d-d7c2-4383-b83c-a5266eb0bfb1)
+![image (1)](https://github.com/user-attachments/assets/a79735b3-df86-4089-8fb5-57f7d667c853)
 
 ---
 
