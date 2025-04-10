@@ -159,8 +159,8 @@ try https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC?node-id=14-73&p=f&t
 |----------------------|--------------------------------|----------------------------------|
 | **Roa AlTurkistani** | Cybersecurity                  | Presentation & Security          |
 | **Ghadir Najm**      | Cybersecurity                  | Business Model                   |
-| **Osama AlGhamdi**   | Sports Artificial Intelligence | Model Building & Analysis        |
-| **Abdulrahman AlNashri** | AI & UI/UX Design           | User Interface & Experience      |
+| **Osama AlGhamdi**   |  AI & Sports                   | Model Building & Analysis        |
+| **Abdulrahman AlNashri** | AI & UI/UX Design          | Model Building & UI/UE           |
 
 ---
 
