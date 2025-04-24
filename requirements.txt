@@ -1,0 +1,32 @@
+# === Backend ===
+flask>=2.0                # Flask web server
+flask-cors>=3.0           # CORS support for Flask
+requests>=2.28            # HTTP requests
+python-dotenv>=1.0        # Load environment variables from .env
+
+# === AI / NLP / LLM ===
+transformers>=4.30.0       # Speech-to-text & NLP pipelines
+torch>=1.13.0              # PyTorch backend for Transformers
+sentencepiece>=0.1.96      # Tokenizer for various models
+autogluon>=1.2.0           # AutoML (for football models)
+joblib>=1.2.0              # Model serialization and utilities
+langchain>=0.0.230         # LangChain core library
+langchain-experimental>=0.0.20   # Experimental agents (create_csv_agent)
+openai>=1.0.0              # OpenAI API client (GPT-4)
+
+# === Data Analysis & Visualization ===
+pandas>=1.5.0              # Data manipulation
+matplotlib>=3.5.0          # Plotting library
+scikit-learn>=1.1.0        # Classical machine learning
+
+# === Audio Processing & TTS ===
+pydub>=0.25.1              # Audio file manipulation
+numpy>=1.23.0
+scipy>=1.8.0
+soundfile>=0.11.0
+librosa>=0.9.0
+ffmpeg-python>=0.2.0       # FFmpeg bindings for Python
+edge-tts>=1.1.1            # Microsoft Edge TTS interface
+
+# === Optional Utilities ===
+uvicorn>=0.18.0            # ASGI server (e.g., for FastAPI)
