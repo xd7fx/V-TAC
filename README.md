@@ -46,7 +46,7 @@
 - **Goal**: Update predictions live using real-time stats
 - **Model**: AutoGluon + real-time snapshot
 - **Data**: goals, possession, shots, pass %, formation, momentum
-- **Metric**: Log loss < 0.3
+- **Metric**: Log loss < 0.27
 
 ![Charts](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)  
 ![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
@@ -69,6 +69,8 @@ Recommendation: ✅ Keep the formation, momentum is high.
 - **Inputs**: minutes, passes, duels, distance covered
 - **Output**: fatigue score (0 to 1)
 - **Frequency**: every 5 minutes for each player
+- **Accuracy**: ~97% 
+
 
 ![download](https://github.com/user-attachments/assets/337dc056-45c3-44be-9292-20f658f2be70)
 
