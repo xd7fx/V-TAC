@@ -59,7 +59,6 @@ Recommendation: ✅ Keep the formation, momentum is high.
 ```
 
 ![Live UI](https://github.com/user-attachments/assets/d5702d96-657c-4633-9b5d-f84f6c7995d8)  
-![Tactical Panel](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)  
 
 ---
 
@@ -70,6 +69,7 @@ Recommendation: ✅ Keep the formation, momentum is high.
 - **Frequency**: every 5 minutes for each player
 
 ![download](https://github.com/user-attachments/assets/337dc056-45c3-44be-9292-20f658f2be70)
+![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
 
 ---
 
@@ -82,7 +82,8 @@ Recommendation: ✅ Keep the formation, momentum is high.
 Best Formation: 4-2-3-1
 → vs 4-3-3 = 70% win rate
 ```
-![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
+![Tactical Panel](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)  
+
 ---
 
 ### 5️⃣ AI Chatbot (LLM-powered)
