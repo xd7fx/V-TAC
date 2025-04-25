@@ -73,6 +73,7 @@ Recommendation: ✅ Keep the formation, momentum is high.
 
 
 ![download](https://github.com/user-attachments/assets/337dc056-45c3-44be-9292-20f658f2be70)
+![image](https://github.com/user-attachments/assets/aa416a70-27ed-4231-8622-5d0c9ab586e4)
 
 ---
 
