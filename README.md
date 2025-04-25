@@ -108,13 +108,12 @@ Best Formation: 4-2-3-1
 - **Lip Sync**: Generates visemes using Rhubarb
 - **3D Avatar**: Visual face for match recommendations
 
-📷 _Suggested Image_: avatar interface or JSON viseme map
 
 ---
 
 ## 🔁 Real-Time Architecture Flow
 
-![Architecture](https://github.com/user-attachments/assets/03cf6dd0-dcb5-4929-adac-3d515eb29fce)
+![image](https://github.com/user-attachments/assets/ae17cb3e-f714-4f5b-a359-4acba8070a14)
 
 - ⏱ Updates every 5 mins during match
 - 📥 Sends outputs to Chatbot / Avatar
@@ -128,9 +127,9 @@ Best Formation: 4-2-3-1
 
 ![Figma 1](https://github.com/user-attachments/assets/58144ca0-7e3c-49bc-b438-3d0b44314ab8)  
 ![Figma 2](https://github.com/user-attachments/assets/8b1e6ede-769a-4e9d-bd66-8257a5be931d)  
-![Figma 3](https://github.com/user-attachments/assets/f1296340-b97b-4e8b-8fe0-93afdb9d51d4)  
-![Figma 4](https://github.com/user-attachments/assets/55b32dd4-ec6b-490f-9abd-8ef2720fc477)  
-![Figma 5](https://github.com/user-attachments/assets/354666d2-75c0-46fe-bc85-f22c8f5f0ff7)
+![Figma 3](https://github.com/user-attachments/assets/f1296340-b97b-4e8b-8fe0-93afdb9d51d4) 
+![image](https://github.com/user-attachments/assets/f85ca1f2-d9b1-4f10-a6cc-2b4bdb06bf8f)
+![image](https://github.com/user-attachments/assets/2118bc4b-9367-43d0-a729-4df7f1ee8af7)
 
 ---
 
