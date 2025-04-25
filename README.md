@@ -1,172 +1,174 @@
-# V-TAC: AI-Powered Football Match Prediction and Tactical Assistant
-![_⁨صورة PNG⁩](https://github.com/user-attachments/assets/03a0fe80-a9b9-43fe-8b26-a1c64b95e47c)
+Sure! Here's the **final professional README** for your V-TAC project — fully in **English**, with **numbered emoji icons** (1️⃣, 2️⃣...) for each model/component, and all images embedded as you requested.
+
+---
+
+# ⚽ V-TAC: Vision Tactical AI Coach
+
+![V-TAC Overview](https://github.com/user-attachments/assets/03a0fe80-a9b9-43fe-8b26-a1c64b95e47c)
 
 ## 🌟 Overview
-**V-TAC (Virtual Tactical Assistant Coach)** is a football intelligence system that leverages AI to provide accurate match outcome predictions and real-time tactical recommendations for coaches. It consists of two core models:
 
-- **Pre-Match Model**: Predicts win/draw/loss outcome using historical data.
-- **Live Match Model**: Predicts live outcomes every 5 minutes and suggests tactical decisions.
-
-The system is powered by **AutoGluon**, enriched with real-world API data, and optimized for practical coaching support.
+**V-TAC (Vision Tactical AI Coach)** is a next-generation football AI system that offers accurate pre-match predictions, live tactical decisions, and fatigue-aware substitution advice. Designed for analysts and coaches, V-TAC combines machine learning, real-time API data, and a chatbot interface.
 
 ---
 
 ## ⚖️ Data Collection & Preparation
-### ✅ Match Data Source
-- Collected from **API-Football** (2016-2023)
-- Leagues: Premier League, La Liga, Serie A, Bundesliga, Saudi Pro League
-- Includes over **50,000 matches**
 
-### ⚙️ Preprocessing Steps
-1. **Data Merging**: All leagues & seasons combined
-2. **Data Cleaning**:
-   - Fill missing values (shots, cards, passes...)
-   - Convert % fields (possession)
-3. **Encoding**: Teams, formations, leagues, seasons
-4. **Feature Engineering**:
-   - Team & Opponent stats separately (shots, passes, corners)
-   - Formation win rates
-   - Recent form (wins, draws, losses)
-   - Average goals, pass accuracy, possession (last 5 matches)
-   - Head-to-head stats
-   - Rank and point differences
-5. **Scaling**: Using `StandardScaler` for numeric features
+### ✅ Data Sources
+- **Match Data**: 70,000+ games from [API-Football](https://www.api-football.com)
+- **Player Data**: 120,000+ player records with live stats (passes, tackles, fatigue)
+- Leagues: Premier League, La Liga, Bundesliga, Serie A, Saudi Pro League, etc.
+
+### ⚙️ Preprocessing Pipeline
+- Merging data across seasons
+- Cleaning missing values
+- Feature engineering (recent form, H2H, xG, formation success)
+- Encoding teams/formations
+- Scaling using `StandardScaler`
+
+📷 _Suggested Image_: pandas.describe table, correlation heatmap, or CSV snapshot
 
 ---
 
-## 🏟️ Model 1: Pre-Match Outcome Prediction
+## 🤖 Core AI Models
 
-### 🎯 Goal
-Predict the match result before kickoff using historical team stats, ranks, and performance trends.
+### 1️⃣ Pre-Match Outcome Prediction
+- **Goal**: Predict Win/Draw/Loss before kickoff
+- **Model**: AutoGluon.Tabular
+- **Type**: Multiclass classification
+- **Features**: team rank, points, pass %, goals, form, formation, H2H
+- **Accuracy**: ~77% after oversampling
 
-### ⚙️ Framework
-- Library: AutoGluon.Tabular
-- Type: Multiclass Classification (1 = Win, 0.5 = Draw, 0 = Loss)
-- Metric: Accuracy
-
-### 📊 Feature Set (~40 total)
-- Team & opponent ranks, points
-- Recent performance (last 5 matches): wins, draws, losses
-- Average goals scored & conceded
-- Possession, corners, shots, pass accuracy
-- Formations & their success rates
-- Head-to-head win/draw/loss rates
-
-### 📈 Performance
-- **Accuracy after oversampling**: ~77%
-- **Model used**: AutoGluon.Tabular with tuning
-
-![image_2025-04-10_12-02-15](https://github.com/user-attachments/assets/e4feb2c4-e18a-42d9-9b05-863c3a0b3440)
-![image_2025-04-10_12-01-52](https://github.com/user-attachments/assets/5c487c62-ff76-4058-9870-140fd545323e)
+![Pre-Match Accuracy](https://github.com/user-attachments/assets/e4feb2c4-e18a-42d9-9b05-863c3a0b3440)  
+![Feature Impact](https://github.com/user-attachments/assets/5c487c62-ff76-4058-9870-140fd545323e)
 
 ---
 
-## 🥅 Model 2: In-Match Live Outcome Prediction
+### 2️⃣ Live Match Outcome Prediction (Every 5 Minutes)
+- **Goal**: Update predictions live using real-time stats
+- **Model**: AutoGluon + real-time snapshot
+- **Data**: goals, possession, shots, pass %, formation, momentum
+- **Metric**: Log loss < 0.3
 
-### 🎯 Goal
-Predict match outcome every 5 minutes during the match using live stats + team formations.
-
-### ⚙️ Framework
-- Library: AutoGluon.Tabular
-- Type: Multiclass Classification (1 = Win, 0.5 = Draw, 0 = Loss)
-- Metric: log_loss
-
-### 🧠 Features (~40+)
-- Current goals, formations, updated pass/shots/possession
-- Team rank, points (live updated)
-- Recent form (last 5 matches)
-- Formation win-rate, live momentum shifts
-
-### 🔁 Real-Time Prediction
-- Predictions are made for each team separately
-- Output: Probabilities for Win / Draw / Loss
-- Displayed with timestamped recommendations for tactical action
-
-#### 🧪 Example
+Example:
 ```
 Chelsea → Win: 63% | Draw: 25% | Loss: 12%
 Recommendation: ✅ Keep the formation, momentum is high.
 ```
-![image](https://github.com/user-attachments/assets/d5702d96-657c-4633-9b5d-f84f6c7995d8)
-![image](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)
 
-
-### 📈 Performance
-- **Log Loss**: < 0.3
-
-![image](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)
-![image (1)](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
-
-
-
----
-## 📊 Model Comparison
-| Feature                                 | Pre-Match Model | Live Match Model |
-|-----------------------------------------|-----------------|------------------|
-| Data source                             | Historical      | Live (snapshot)  |
-| Update frequency                        | Once            | Every 5 mins     |
-| Tactical recommendation                 | ✅ Yes         | ✅ Yes          |
-| Predictive accuracy                     | High            | Adaptive         |
-| Use case                                | Planning        | In-game coaching |
+![Live UI](https://github.com/user-attachments/assets/d5702d96-657c-4633-9b5d-f84f6c7995d8)  
+![Tactical Panel](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)  
+![Charts](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)  
+![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
 
 ---
 
-## 🔍 Tactical Intelligence Engine
-### 👉 Formation Recommendation
-Recommends the **most effective formation** based on win rate history vs opponent formation.
-```text
-🌟 Best Formation: 4-2-3-1 (Win rate: 65%)
-🔹 Best vs 4-3-3 → 70% win rate
+### 3️⃣ Player Fatigue Estimator
+- **Goal**: Detect when a player is too tired
+- **Inputs**: minutes, passes, duels, distance covered
+- **Output**: fatigue score (0 to 1)
+- **Frequency**: every 5 minutes for each player
+
+📷 _Suggested Image_: fatigue graph or player fatigue timeline
+
+---
+
+## 🧭 Recommendation & Interface Components
+
+### 4️⃣ Formation Suggestion Engine
+- Type: Rule-based
+- Recommends the best formation historically vs opponent
+```
+Best Formation: 4-2-3-1
+→ vs 4-3-3 = 70% win rate
 ```
 
-### 🤖 AI Chat Integration
-Smart assistant gives natural language advice to the coach:
-- "Try switching to 4-4-2 to counter midfield control"
-- "Increase pressing intensity; possession dropping"
+---
+
+### 5️⃣ AI Chatbot (LLM-powered)
+- Based on **OpenChat / DeepSeek**
+- Answers tactical questions using real predictions
+- Live updates trigger smart language output
+```
+"Switch to 4-4-2, midfield fatigue is increasing."
+```
 
 ---
 
-## 📅 UI / UX
+### 6️⃣ CSV Agent (LangChain)
+- Used for QA over match/player CSVs
+- Helpful during model validation/debugging
 
-try https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC?node-id=14-73&p=f&t=bnZt3raZhrZ4YcC4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1
-![image](https://github.com/user-attachments/assets/58144ca0-7e3c-49bc-b438-3d0b44314ab8)
-![image](https://github.com/user-attachments/assets/8b1e6ede-769a-4e9d-bd66-8257a5be931d)
-![image](https://github.com/user-attachments/assets/f1296340-b97b-4e8b-8fe0-93afdb9d51d4)
-![image](https://github.com/user-attachments/assets/55b32dd4-ec6b-490f-9abd-8ef2720fc477)
-![image](https://github.com/user-attachments/assets/354666d2-75c0-46fe-bc85-f22c8f5f0ff7)
+📷 _Suggested Image_: screenshot of CSV-based agent Q&A
 
 ---
 
-## 🏢 User Interface (Future Vision)
-### Main Dashboard
-- 🏆 Pre-Match Prediction Button
-- ⏱️ Live Match Mode (Auto updates every 5 mins)
-- 🔬 Tactical Recommendation Section
-- 🤖 AI Chat Assistant Access
----
+### 7️⃣ 3D Avatar + Edge-TTS + Rhubarb Lip Sync
+- **TTS**: Converts predictions to voice
+- **Lip Sync**: Generates visemes using Rhubarb
+- **3D Avatar**: Visual face for match recommendations
 
-## 🌐 Try It Out
-- Load your match CSV with rank + points
-- Run `model_1.ipynb` or `model_2.ipynb`
-- Visualize match predictions and curves
+📷 _Suggested Image_: avatar interface or JSON viseme map
 
 ---
 
-## 💼 Authors
+## 🔁 Real-Time Architecture Flow
 
-| Name                 | Specialty                      | Role                             |
-|----------------------|--------------------------------|----------------------------------|
-| **Abdulrahman AlNashri** | AI & UI/UX Design          | Model Building & UI/UE           |
-| **Osama AlGhamdi**   |  AI & Sports                   | Model Building & Analysis        |
-| **Rawaa AlTurkistani** | Cybersecurity                  | Presentation & Security          |
-| **Ghadir Najm**      | Cybersecurity                  | Business Model                   |
+![Architecture](https://github.com/user-attachments/assets/03cf6dd0-dcb5-4929-adac-3d515eb29fce)
 
-
+- ⏱ Updates every 5 mins during match
+- 📥 Sends outputs to Chatbot / Avatar
+- 🔁 After match: update training data + fine-tune model
 
 ---
 
-## 🚀 Next Steps
-- 📉 Integrate GPS/IMU fatigue detection
-- 🏋️ Player-level performance modeling
-- 🤖 Full deployment of V-TAC as an LLM assistant
-- 🏅 Real-world testing with clubs
+## 💻 UI/UX (Figma Preview)
+
+[🔗 View Prototype](https://www.figma.com/proto/cMnlbXuyIG1liGdh1vhMMY/V-TAC)
+
+![Figma 1](https://github.com/user-attachments/assets/58144ca0-7e3c-49bc-b438-3d0b44314ab8)  
+![Figma 2](https://github.com/user-attachments/assets/8b1e6ede-769a-4e9d-bd66-8257a5be931d)  
+![Figma 3](https://github.com/user-attachments/assets/f1296340-b97b-4e8b-8fe0-93afdb9d51d4)  
+![Figma 4](https://github.com/user-attachments/assets/55b32dd4-ec6b-490f-9abd-8ef2720fc477)  
+![Figma 5](https://github.com/user-attachments/assets/354666d2-75c0-46fe-bc85-f22c8f5f0ff7)
+
+---
+
+## 🧠 AI Tech Stack
+
+| Layer               | Technology                  |
+|---------------------|------------------------------|
+| Model Training      | AutoGluon, Scikit-learn      |
+| Real-Time Updates   | API-Football + custom logic  |
+| Data Interaction    | LangChain CSV Agent          |
+| Voice Interaction   | Edge-TTS + Rhubarb           |
+| Avatar Interface    | React / Streamlit            |
+| Language Model      | OpenChat / DeepSeek          |
+
+---
+
+## 👥 Team
+
+| Name                 | Role                        |
+|----------------------|-----------------------------|
+| Abdulrahman AlNashri | AI Modeling + UI/UX         |
+| Osama AlGhamdi       | Tactical AI + Evaluation    |
+| Rawaa AlTurkistani   | Security + Presentations    |
+| Ghadir Najm          | Business + Coordination     |
+
+---
+
+## 🚀 What's Next?
+- 🎮 GPS/IMU sensors for live fatigue
+- 📊 Deep learning for player embeddings
+- 🧠 Fully autonomous LLM assistant
+- ⚽ Deployment in real matches with clubs
+
+---
+
+Would you like this version:
+- As `README.md` ready for GitHub?
+- Exported as PDF with design?
+- Translated to Arabic as well?
+
+Let me know — I can generate it instantly 💪
