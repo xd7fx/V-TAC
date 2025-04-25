@@ -120,6 +120,10 @@ Best Formation: 4-2-3-1
 
 ![image](https://github.com/user-attachments/assets/ae17cb3e-f714-4f5b-a359-4acba8070a14)
 
+
+https://github.com/user-attachments/assets/83691616-95ec-49c1-a6f8-60fcc0439f3d
+
+
 - ⏱ Updates every 5 mins during match
 - 📥 Sends outputs to Chatbot / Avatar
 - 🔁 After match: update training data + fine-tune model
