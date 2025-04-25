@@ -48,6 +48,10 @@
 - **Data**: goals, possession, shots, pass %, formation, momentum
 - **Metric**: Log loss < 0.3
 
+![Charts](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)  
+
+
+
 Example:
 ```
 Chelsea → Win: 63% | Draw: 25% | Loss: 12%
@@ -56,8 +60,6 @@ Recommendation: ✅ Keep the formation, momentum is high.
 
 ![Live UI](https://github.com/user-attachments/assets/d5702d96-657c-4633-9b5d-f84f6c7995d8)  
 ![Tactical Panel](https://github.com/user-attachments/assets/ea4371f9-c8ca-4aa7-b0c7-130bbcdf4c1f)  
-![Charts](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)  
-![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
 
 ---
 
@@ -67,7 +69,7 @@ Recommendation: ✅ Keep the formation, momentum is high.
 - **Output**: fatigue score (0 to 1)
 - **Frequency**: every 5 minutes for each player
 
-📷 _Suggested Image_: fatigue graph or player fatigue timeline
+![download](https://github.com/user-attachments/assets/337dc056-45c3-44be-9292-20f658f2be70)
 
 ---
 
@@ -80,7 +82,7 @@ Recommendation: ✅ Keep the formation, momentum is high.
 Best Formation: 4-2-3-1
 → vs 4-3-3 = 70% win rate
 ```
-
+![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
 ---
 
 ### 5️⃣ AI Chatbot (LLM-powered)
