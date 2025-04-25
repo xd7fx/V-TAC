@@ -1,6 +1,4 @@
-Sure! Here's the **final professional README** for your V-TAC project — fully in **English**, with **numbered emoji icons** (1️⃣, 2️⃣...) for each model/component, and all images embedded as you requested.
 
----
 
 # ⚽ V-TAC: Vision Tactical AI Coach
 
@@ -163,12 +161,3 @@ Best Formation: 4-2-3-1
 - 📊 Deep learning for player embeddings
 - 🧠 Fully autonomous LLM assistant
 - ⚽ Deployment in real matches with clubs
-
----
-
-Would you like this version:
-- As `README.md` ready for GitHub?
-- Exported as PDF with design?
-- Translated to Arabic as well?
-
-Let me know — I can generate it instantly 💪
