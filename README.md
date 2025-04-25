@@ -49,6 +49,8 @@
 - **Metric**: Log loss < 0.3
 
 ![Charts](https://github.com/user-attachments/assets/895f25ca-19e6-45b8-b3cc-98145d6cf9da)  
+![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
+
 
 
 
@@ -69,7 +71,6 @@ Recommendation: ✅ Keep the formation, momentum is high.
 - **Frequency**: every 5 minutes for each player
 
 ![download](https://github.com/user-attachments/assets/337dc056-45c3-44be-9292-20f658f2be70)
-![Prediction Curves](https://github.com/user-attachments/assets/dc3b88c4-c6bc-4203-904d-566bb33a401a)
 
 ---
 
