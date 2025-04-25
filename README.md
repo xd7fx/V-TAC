@@ -24,7 +24,7 @@
 - Encoding teams/formations
 - Scaling using `StandardScaler`
 
-📷 _Suggested Image_: pandas.describe table, correlation heatmap, or CSV snapshot
+![image](https://github.com/user-attachments/assets/c3a70e90-44c8-4523-aaf2-ed8855b88a71)
 
 ---
 
@@ -99,7 +99,6 @@ Best Formation: 4-2-3-1
 - Used for QA over match/player CSVs
 - Helpful during model validation/debugging
 
-📷 _Suggested Image_: screenshot of CSV-based agent Q&A
 
 ---
 
@@ -141,8 +140,8 @@ Best Formation: 4-2-3-1
 | Real-Time Updates   | API-Football + custom logic  |
 | Data Interaction    | LangChain CSV Agent          |
 | Voice Interaction   | Edge-TTS + Rhubarb           |
-| Avatar Interface    | React / Streamlit            |
-| Language Model      | OpenChat / DeepSeek          |
+| Avatar Interface    | React + Flask                |
+| Language Model      | OpenChat                     |
 
 ---
 
@@ -151,7 +150,7 @@ Best Formation: 4-2-3-1
 | Name                 | Role                        |
 |----------------------|-----------------------------|
 | Abdulrahman AlNashri | AI Modeling + UI/UX         |
-| Osama AlGhamdi       | Tactical AI + Evaluation    |
+| Osama AlGhamdi       | AI Modeling + Sport         |
 | Rawaa AlTurkistani   | Security + Presentations    |
 | Ghadir Najm          | Business + Coordination     |
 
