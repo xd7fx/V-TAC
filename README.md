@@ -91,7 +91,7 @@ Best Formation: 4-2-3-1
 ---
 
 ### 5️⃣ AI Chatbot (LLM-powered)
-- Based on **OpenChat / DeepSeek**
+- Based on **OpenChat**
 - Answers tactical questions using real predictions
 - Live updates trigger smart language output
 ```
